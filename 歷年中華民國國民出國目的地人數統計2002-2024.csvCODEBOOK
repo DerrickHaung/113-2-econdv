@@ -1,0 +1,28 @@
+### **1. 檔案的內容與什麼有關？**  
+這份資料是 **歷年中華民國（台灣）國民出國目的地人數統計**，涵蓋 **2002 年至 2024 年**。它記錄了台灣人前往不同國家的 **旅遊人數**，依照 **地區與國家細分**。
+
+---
+
+### **2. 裡面的變數有哪些？**  
+資料集包含以下變數（欄位）：  
+1. **首站抵達地**（大區域，例如亞洲地區）  
+2. **細分**（具體國家或地區，例如日本、日本）  
+3. **各年份**（2002-2024）：該年台灣人前往該目的地的人數  
+
+---
+
+### **3. 變數的類型為何？**  
+- **首站抵達地**（類別）：表示大區域，例如「亞洲地區」  
+- **細分**（`object` /字串）：表示具體的國家/地區，例如「日本」  
+- **2002-2024**（`object`/字串，但應該轉為`int`）：表示該年出國人數，目前是字串格式（因為數字中有逗號`,`），需要轉換成數字才能用於計算與分析  
+---------------------------------------------------------------
+The dataset provided is about the number of Taiwanese citizens traveling abroad each year from 2002 to 2024, categorized by their first destination.
+
+Variables:
+Region: The geographical area where the destination is located (e.g., Asia, Europe).
+Destination: The specific country or region visited (e.g., Japan, Korea, USA).
+Yearly Counts: The number of people traveling to each destination for each year from 2002 to 2024.
+Variable Types:
+Region: Categorical (Text)
+Destination: Categorical (Text)
+Yearly Counts: Numerical (Text, but representing integer values with commas)

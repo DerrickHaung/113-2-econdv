@@ -28,3 +28,40 @@
 漲跌價差：dbl（double，浮點數型別），表示當日的漲跌幅。
 成交筆數：int（integer，整數型別），表示證券的交易筆數。
 這些變數的資料型態反映了每個變數的實際數據屬性，像是 dbl 顯示數值有小數點，int 顯示整數數據，而 chr 顯示字串。
+
+# My Data Analysis Project
+
+This project analyzes stock market data. Below are some key points and details about the dataset.
+
+## Key Points
+
+- Stock data is collected daily.
+- The dataset includes multiple stock indicators like opening price, closing price, and trading volume.
+- The data will be reshaped for better analysis.
+
+## Stock Data Example
+
+| Stock Code | Opening Price | Closing Price | Volume |
+|------------|---------------|---------------|--------|
+| AAPL       | 150.0         | 155.0         | 100000 |
+| TSLA       | 700.0         | 710.0         | 200000 |
+| AMZN       | 3300.0        | 3350.0        | 150000 |
+
+## Code Example
+
+Here is an R code block used to reshape the stock data:
+
+```r
+# Loading the tidyverse package
+library(tidyverse)
+
+# Read the stock data
+stock_data <- read_csv("stock_data.csv")
+
+# Reshape the data
+reshaped_data <- stock_data %>%
+  pivot_wider(names_from = `Stock Code`, values_from = c(`Opening Price`, `Closing Price`, `Volume`))
+
+# View reshaped data
+glimpse(reshaped_data)
+

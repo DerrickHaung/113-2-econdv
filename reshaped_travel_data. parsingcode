@@ -1,0 +1,13 @@
+library(tidyverse)
+
+# Import data
+reshape_travel_data <- read_csv("reshaped_travel_data.csv") %>%
+  mutate(
+    `首站抵達地` = as.factor(`首站抵達地`),
+    `細分` = as.factor(`細分`),
+    Year = as.integer(Year),
+    Number_of_Travelers = as.numeric(Number_of_Travelers)
+  )
+
+# View data
+glimpse(reshape_travel_data)

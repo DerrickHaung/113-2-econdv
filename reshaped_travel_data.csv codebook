@@ -1,0 +1,20 @@
+##Dataset Description
+
+This dataset contains information on the number of travelers arriving at various destinations, segmented by region and country, over different years. The dataset includes missing values for some records.
+
+##variable description
+
+Variable Name           | Class    | Description                                        | Example Values         
+---------------------- |---------|------------------------------------------------ |---------------------
+首站抵達地             | String  | The main region where travelers first arrive.   | "亞洲地區"         
+細分                   | String  | The specific country within the region.         | "日本Japan"        
+Year                   | Integer | The year of recorded travel data.               | 2002, 2003, 2004   
+Number_of_Travelers    | Numeric (can be NA) | The number of travelers arriving in that year. | NA, 5000000, 7200000 
+
+##Notes
+
+The column Number_of_Travelers contains missing values (NA).
+
+The dataset is useful for analyzing travel trends over time.
+
+Regional and country names are given in both Chinese and English.
